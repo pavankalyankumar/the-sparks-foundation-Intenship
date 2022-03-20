@@ -1,0 +1,8 @@
+
+<head>
+<body style="background-color:	#34568B"><br>
+<center>
+<form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_J90WkDL4ddt0h0" async> </script> </form>
+</center>
+</body>
+</head>
