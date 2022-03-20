@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Sparks Donation</title>
+        <link rel="stylesheet" href="indCss.css">
+    </head>
+    <body>
+        <header>
+            <style>
+              body{background-color:#34568B;}
+            </style>
+       
+        </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+       <form>
+       <table align="center" id="myTab">
+           <tr><td><img src="c1.png" width="50" height="30"></td><td>Visakhapatnam, Andhra Pradesh</td><td><input type="text" size="60"   placeholder="Enter your name" id="uName"></td><td rowspan="3"><textarea rows="9" cols="65" id="mymsgg" placeholder="Enter your message"></textarea></td></tr>
+           <tr><td><img src="c2.png" width="50" height="30"></td><td>9865412378</td><td><input type="text" size="60"   placeholder="Enter phone number" id="phn"></td></tr>
+           <tr><td><img src="c3.png" width="50" height="30"></td><td>mailus@spark.com</td><td><input type="text" size="60"   placeholder="Enter your email" id="mail"></td></tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <center><button type="button" id="sendB" onclick="myF()" style="font-size: 1.5em; width: 105px;height: 35px;">Send</button></center></form>
+        <p id="res" align="center" style="font-size: 1.5em;"></p>
+        <script>
+            function myF(){
+                   var s1=document.getElementById("uName").value
+                   var s2=document.getElementById("phn").value
+                   var s3=document.getElementById("mail").value
+                   var s4=document.getElementById("mymsgg").value
+
+                    var regex=/^([a-zA-Z0-9.-_]+)@([a-zA-Z0-9]+).([a-z]+)(.[a-z]+)?$/;
+                   if(s1==""){
+                       alert("Name must be filled");
+                       return false;
+                   }
+                   else if(s2=="" || s2.length!=10 || (s2.charAt(0)!="9" && s2.charAt(0)!="8" && s2.charAt(0)!="7")){
+	                    alert("Invalid Phone number");
+		                return false;
+	               }
+                   else if(regex.test(s3)==false){
+	                        alert("Invalid Email");
+		                    return false;
+	               }
+                   else if(s4==""){
+                       alert("Empty message! Please fill your message");
+                       return false;
+                   }
+                   else{
+                    document.getElementById("res").innerHTML="Sent Successfully!"
+
+                   }
+            }
+        </script>
+    </body>
+</html>
